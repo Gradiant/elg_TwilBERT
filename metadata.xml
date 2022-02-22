@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ms:MetadataRecord xmlns:ms="http://w3id.org/meta-share/meta-share/"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://w3id.org/meta-share/meta-share/ https://live.european-language-grid.eu/metadata-schema/ELG-SHARE.xsd">
+    <ms:MetadataRecordIdentifier ms:MetadataRecordIdentifierScheme="http://w3id.org/meta-share/meta-share/elg">default
+        id
+    </ms:MetadataRecordIdentifier>
+    <ms:metadataCreationDate>2022-01-18</ms:metadataCreationDate>
+    <ms:metadataLastDateUpdated>2022-01-18</ms:metadataLastDateUpdated>
+    <ms:compliesWith>http://w3id.org/meta-share/meta-share/ELG-SHARE</ms:compliesWith>
+    <ms:DescribedEntity>
+        <ms:LanguageResource>
+            <ms:entityType>LanguageResource</ms:entityType>
+            <ms:resourceName xml:lang="en">TwilBERT: Pre-trained deep bidirectional transformers for Spanish Twitter.</ms:resourceName>
+            <ms:resourceShortName xml:lang="en">twilbert</ms:resourceShortName>
+            <ms:description xml:lang="en">TWilBert is an adaptation of the BERT model with modifications published in various papers (ALBERT, Product Key Memories or RoBERTa), for learning contextualized embeddings. The objective is to promote the state of the art in Natural Language Processing tasks in Spanish dedicated to the social network Twitter. For this reason, we provide pre-trained models specialized in the Spanish language and the Twitter domain. Thus, it is intended to establish a new and competitive baseline, which allows researchers to focus their attention on the development of new and better architectures for NLP tasks on Spanish Twitter. TWilBert is provided as a framework that allows pre-training, evaluation and fine-tuning of BERT-like models, with which state-of-the-art results have been obtained for a large number of tasks proposed in various international conferences on the classification of Spanish texts in Twitter</ms:description>
+            <ms:LRIdentifier ms:LRIdentifierScheme="http://w3id.org/meta-share/meta-share/elg">ELG id automatically assigned</ms:LRIdentifier>
+            <ms:version>1.0.0</ms:version>
+            <ms:keyword xml:lang="en">Text classification
+            </ms:keyword> <!--dar varias opciones (cuantas más mejor)-->
+            <ms:keyword xml:lang="en">twitter
+            </ms:keyword> <!--dar varias opciones (cuantas más mejor)-->
+            <ms:keyword xml:lang="en">contextualized embeddings
+            </ms:keyword> <!--dar varias opciones (cuantas más mejor)-->
+            <ms:keyword xml:lang="en">TwilBERT
+            </ms:keyword> <!--dar varias opciones (cuantas más mejor)-->
+            <ms:keyword xml:lang="es">clasificación de textos</ms:keyword>
+            <ms:keyword xml:lang="es">embeddings contextuales</ms:keyword>
+            <ms:landingPage>https://github.com/jogonba2/TWilBert
+            </ms:landingPage>
+            <ms:resourceProvider>
+                <ms:Organization>
+                    <ms:actorType>Organization</ms:actorType>
+                    <ms:organizationName xml:lang="en">Galician Research and Development Center in Advanced Telecommunications (Gradiant)</ms:organizationName>
+                    <ms:organizationShortName xml:lang="en">GRADIANT</ms:organizationShortName>
+                    <ms:website>https://www.gradiant.org/</ms:website>
+                </ms:Organization>
+            </ms:resourceProvider>
+            <ms:publicationDate>2022-01-18</ms:publicationDate>
+            <ms:intendedApplication>
+                <ms:LTClassRecommended>http://w3id.org/meta-share/omtd-share/TextCategorization
+                </ms:LTClassRecommended>
+            </ms:intendedApplication>
+            <ms:LRSubclass>
+                <ms:ToolService>
+                    <ms:function>
+                        <ms:LTClassRecommended>http://w3id.org/meta-share/omtd-share/TextCategorization
+                            
+                        </ms:LTClassRecommended>
+                    </ms:function>
+                    <ms:SoftwareDistribution>
+                        <ms:SoftwareDistributionForm>http://w3id.org/meta-share/meta-share/dockerImage
+                        </ms:SoftwareDistributionForm>
+                        <ms:webServiceType>http://w3id.org/meta-share/meta-share/other</ms:webServiceType>
+                        <ms:operatingSystem>http://w3id.org/meta-share/meta-share/linux</ms:operatingSystem>
+                        <ms:licenceTerms>
+                              ms:licenceTermsName xml:lang="en">BSD 4-Clause License</ms:licenceTermsName>
+                             <ms:licenceTermsURL>https://spdx.org/licenses/BSD-4-Clause.html</ms:licenceTermsURL>
+                             <ms:LicenceIdentifier ms:LicenceIdentifierScheme="http://w3id.org/meta-share/meta-share/SPDX">BSD-4-Clause</ms:LicenceIdentifier>
+                             <ms:conditionOfUse>http://w3id.org/meta-share/meta-share/unspecified</ms:conditionOfUse>                        
+                        </ms:licenceTerms>
+                        <ms:membershipInstitution>ELiRF - Enginyeria del Llenguatge Natural i Reconeiximent de Formes</ms:membershipInstitution>
+                    </ms:SoftwareDistribution>
+                    <ms:languageDependent>FALSE</ms:languageDependent>
+                    <ms:inputContentResource>
+                        <ms:processingResourceType>http://w3id.org/meta-share/meta-share/userInputText
+                        </ms:processingResourceType>
+                        <ms:language>
+                            <ms:languageTag>es</ms:languageTag>
+                            <ms:languageId>es</ms:languageId>
+                        </ms:language>
+                        <ms:mediaType>http://w3id.org/meta-share/meta-share/text</ms:mediaType>
+                        <ms:dataFormat>
+                            <ms:dataFormatRecommended>http://w3id.org/meta-share/omtd-share/Text
+                            </ms:dataFormatRecommended>
+                        </ms:dataFormat>
+                        <ms:characterEncoding>http://w3id.org/meta-share/meta-share/UTF-8</ms:characterEncoding>
+                    </ms:inputContentResource>
+                    <ms:outputResource>
+                        <ms:processingResourceType>http://w3id.org/meta-share/meta-share/outputText</ms:processingResourceType>
+                        <ms:language>es</ms:language>
+                        <ms:mediaType>http://w3id.org/meta-share/meta-share/text</ms:mediaType>
+                        <ms:dataFormat>http://w3id.org/meta-share/omtd-share/Json</ms:dataFormat>
+                        <ms:characterEncoding>http://w3id.org/meta-share/meta-share/UTF-8</ms:characterEncoding>
+                    </ms:outputResource>
+
+                    <ms:implementationLanguage>Python</ms:implementationLanguage> <!-- Java, Python-->
+                    <ms:runningEnvironmentDetails xml:lang="">linux</ms:runningEnvironmentDetails>
+                    <ms:trl>http://w3id.org/meta-share/meta-share/trl3</ms:trl>
+                    <ms:evaluated>false</ms:evaluated> <!--Recommended-->
+                </ms:ToolService>
+            </ms:LRSubclass>
+        </ms:LanguageResource>
+
+
+        <ms:Organization>
+            <ms:organizationName xml:lang="">GRADIANT</ms:organizationName>
+            <ms:website>http://gradiant.org/</ms:website>
+        </ms:Organization>
+    </ms:DescribedEntity>
+
+</ms:MetadataRecord>
