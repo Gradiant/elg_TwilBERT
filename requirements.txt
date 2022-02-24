@@ -1,0 +1,12 @@
+tensorflow==1.9.0
+keras==2.2.4
+pandas==0.23.0
+numpy==1.17.3
+scikit-learn==0.21.1
+sentencepiece==0.1.95
+h5py==2.10.0
+tqdm==4.62.3
+
+## Flask API requirements
+flask
+flask_json
