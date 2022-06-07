@@ -109,3 +109,4 @@ The original work of TwilBERT is presented in the following paper:
 
 - Gonzalez, Jose Angel, Lluís-F. Hurtado, and Ferran Pla. "TWilBert: Pre-trained deep bidirectional transformers for Spanish Twitter." Neurocomputing 426 (2021): 58-69.
 
+The license of the original work is BSD 4-Clause License.
