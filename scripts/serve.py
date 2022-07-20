@@ -18,6 +18,9 @@ app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 APP_ROOT = "./"
 app.config["APPLICATION_ROOT"] = APP_ROOT
+app.config["JSON_ADD_STATUS"] = False
+app.config["JSON_SORT_KEYS"] = False
+
 json_app = FlaskJSON(app)
 
 
@@ -36,8 +39,8 @@ def predict_json():
             labels, predictions = processor.predict(content)
         else:
             labels, predictions = processor.predict([content])
-
-        output = generate_successful_response(labels[0], np.max(predictions[0]))
+            label = translate_labels(labels[0])
+        output = generate_successful_response(label, np.max(predictions[0]))
         return output
     except Exception as e:
         return generate_failure_response(
@@ -47,6 +50,13 @@ def predict_json():
             params=None,
             detail=e,
         )
+
+
+def translate_labels(label):
+    if label == "0":
+        return "Not hateful"
+    else:
+        return "Hateful"
 
 
 @json_app.invalid_json_error
