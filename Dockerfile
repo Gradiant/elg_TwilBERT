@@ -2,9 +2,7 @@ FROM python:3.6
 
 
 COPY TWilBert /app/TWilBert
-COPY requirements.txt /app/
-COPY pythonpath.sh /app/
-
+COPY requirements.txt pythonpath.sh config /app/
 
 RUN pip3 install --upgrade pip
 RUN pip3 install -r /app/requirements.txt
@@ -18,6 +16,9 @@ ENV LANG="C.UTF-8" \
 
 EXPOSE 8866
 
-WORKDIR /app/TWilBert
+WORKDIR /app/TWilBert/
 
 CMD ["python3", "serve.py"]
+RUN ["python3", "-c", "from init_model import Initializer; Initializer()"]
+
+ENV TRANSFORMERS_OFFLINE=1

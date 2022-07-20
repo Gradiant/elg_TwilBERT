@@ -23,6 +23,10 @@ Optionally you can download the weights for the base model: https://drive.google
 ## Dockerfile
 
 ### Build
+1) Download the models and run the setuo_projects script as specified in previous steps.
+2) Finetune the model and place it in /TwilBert/wights/finetuned_microservs_hateeval19_large
+3) Move the files in /scripts to /TWilBert
+4) Build the image:
 
 ```
 bash docker-build.sh
@@ -33,7 +37,7 @@ bash docker-build.sh
 
 #### With docker
 ```
-docker run --rm -p 0.0.0.0:8866:8866 --name twilbert elg_twilbert
+docker run --rm -p 0.0.0.0:8866:8866 --name twilbert elg_twilbert:1.0.1
 ```
 
 #### Locally
@@ -49,7 +53,7 @@ _NOTE: You must execute this command in the environment with *python3.6* and all
 Verify the API works as expected.
 
 ```
-curl -X POST  http://0.0.0.0:8866/predict_json -H 'Content-Type: application/json' -d '{"type": "text", "content":"Este es un texto de prueba"}'
+curl -X POST  http://0.0.0.0:8866/predict_json -H 'Content-Type: application/json' -d '{"type": "text", "content":"Me gusta correr los sábados por el borde del río"}'
 ```
 
 
